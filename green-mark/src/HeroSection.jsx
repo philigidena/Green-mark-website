@@ -57,14 +57,17 @@ const HeroSection = () => {
   useEffect(() => {
     cardRefs.current.forEach((ref, idx) => {
       if (ref) {
-        gsap.fromTo(
-          ref,
-          { y: 40, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8, delay: 0.2 + idx * 0.2, ease: 'power3.out' }
-        );
+        gsap.set(ref, { y: 40, opacity: 0 });
+        gsap.to(ref, {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          delay: 0.2 + idx * 0.2,
+          ease: 'power3.out',
+        });
       }
     });
-  }, []);
+  });
 
   useEffect(() => {
     const interval = setInterval(() => {

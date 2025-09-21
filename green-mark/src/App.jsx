@@ -1,5 +1,6 @@
 import Header from './Header';
 import HeroSection from './HeroSection';
+import DealOfTheDay from './DealOfTheDay';
 import './App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <Header />
       <HeroSection />
+      <DealOfTheDay />
     </>
   );
 }
